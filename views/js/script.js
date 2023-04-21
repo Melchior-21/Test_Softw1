@@ -1,5 +1,7 @@
 window.onload = () => {
-    console.log("lodeando")    
+    console.log("lodeando")
+    
+    
 }
 const postData = () =>{
     const data = {
