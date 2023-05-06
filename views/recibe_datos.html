@@ -9,7 +9,8 @@
   <body>
     <nav class="navbar bg-primary">
         <div class="container-fluid">
-          <a class="navbar-brand">Navbar</a>
+          <a class="navbar-brand">The Temperature Local Record</a>
+
           <div class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
@@ -20,13 +21,31 @@
  
           <form action="/enviarDatos" method="POST">
             <div class="mb-3">
-              <label for="buscar" class="form-label">Buscar</label>
+
+              <label for="buscar" class="form-label">1-Enter The Temperature into Fahrenheit Degree</label>
+              <input  class="form-control" id="buscar" name="buscar">
+
+              <label for="buscar" class="form-label">2-Enter The Temperature into Celcius Degree</label>
+              <input  class="form-control" id="buscar" name="buscar">
+
+              <label for="buscar" class="form-label">3-Enter The Temperature into Kelvin Degree</label>
+              <input  class="form-control" id="buscar" name="buscar">
+
+              <label for="buscar" class="form-label">4-Type The Registration Time</label>
+              <input  class="form-control" id="buscar" name="buscar">
+              
+              <label for="buscar" class="form-label">5-Type The Date From This Format: YYYY-MM-DD</label>
+              <input  class="form-control" id="buscar" name="buscar">
+
+              <label for="buscar" class="form-label">6-Enter The Authorized Personal Name</label>
+              <input  class="form-control" id="buscar" name="buscar">
+              <label for="buscar" class="form-label">7-Type The Area Local</label>
               <input  class="form-control" id="buscar" name="buscar">
             </div>
-            <button class="btn btn-primary">Buscar</button>
+            <button class="btn btn-primary">Search</button>
           </form>  
           <div class="alert alert-primary" role="alert">
-            Buscando Resultados de : ${busqueda}
+            Looking for temperature results: ${busqueda}
           </div>  
     </div>
       

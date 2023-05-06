@@ -1,20 +1,15 @@
-const express = require('express')
 const utils = require("../resources/utils")
-const router = express.Router()
-
-router.get('/test',(request,response)=>{
+const test = (request,response) =>{
     response.send('testeando')
-})
-
-router.post('/postData',(request,response) =>{
+}
+const postData = (request,response) =>{
     console.log(request.body)
     response.send(`Los datos enviados fueron ${request.body.email} ${request.body.password}`)
-})
-
-router.get('/index',(request,response) =>{
+}
+const index = (request,response) =>{
     response.render('index')
-})
-router.post('/enviarDatos',async (request,response) =>{
+}
+const enviarDatos = (request,response) =>{
     //const respuesta = await utils.validaOpenai(request.body.buscar)
     // respuesta = await utils.validaInput(request.body.buscar);
     // console.log(respuesta)
@@ -22,15 +17,20 @@ router.post('/enviarDatos',async (request,response) =>{
     //     response.render('recibe_datos',{locals: {busqueda : "Busqueda invalida"}})
     // }else{
     //     response.render('recibe_datos',{locals: {busqueda : request.body.buscar}})
-    // }  
+    // }
     response.render('recibe_datos',{locals: {busqueda : utils.validaSanitizer(request.body.buscar)}})
-})
-
-router.get('/ejercicio',(request,response)=>{
-    response.render('vista ejercicio')
-})
-router.post('recibeDataEjercicio',(request,reponse) =>{
-    s
-})
-
-module.exports = router
+}
+const ejercicio = (request,response) =>{
+    response.render('vista_ejercicios')
+}
+const recibeDataEjercicio = (request,response) =>{
+    response.render('recibe_datos',)
+}
+module.exports = {
+    test,
+    postData,
+    index,
+    enviarDatos,
+    ejercicio,
+    recibeDataEjercicio,
+}
